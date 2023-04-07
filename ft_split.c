@@ -6,59 +6,88 @@
 /*   By: mevangel <mevangel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 18:56:12 by mevangel          #+#    #+#             */
-/*   Updated: 2023/04/02 01:53:58 by mevangel         ###   ########.fr       */
+/*   Updated: 2023/04/05 18:49:09 by mevangel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
 #include <unistd.h>
+#include "libft.h" 
 
-//i'll need strchr to check the existence of char c
-// and substr to place each substring to the 2D array, char**
-
-//maybe one separate function to find all the start points of substrings?
-
-size_t	ft_num_substrings(char const *s, char c)
+static size_t	ft_count_substrings(char *s, char c)
 {
 	size_t	num;
 	size_t	i;
-	size_t	found_c;
 
 	num = 0;
 	i = 0;
-	found_c = 0;
-
 	while (s[i])
 	{
-		if (s[i] != c && found_c == 0)
-		{
+		if ((s[i] != c && s[i + 1] == c) || (s[i] != c && s[i + 1] == '\0'))
 			num++;
-			found_c = 1;
-		}
-		else if (s[i] == c)
-			found_c = 0;
 		i++;
 	}
-	/*while ()
-	{
-		
-	}
-
-	*/
 	return (num);
 }
 
-// char	**ft_split(char const *s, char c)
-// {
-	
-// }
-#include <stdio.h>
-
-int main(void)
+static size_t	ft_substring_length(char *sub, char c)
 {
-	char str[] = " Hello world! Mary Kate here trying to survive the night! ";
-	char strb[] = "Hello world! Mary Kate here trying to survive the night! ";
-	printf("I found %zu substrings/words\n", ft_num_substrings(str, 32));
-	printf("B: I found %zu substrings/words\n", ft_num_substrings(strb, 32));
-	return 0;
+	size_t	len;
+
+	len = 0;
+	while (sub[len] != '\0' && sub[len] != c)
+		len++;
+	return (len);
+}
+
+static void	ft_free_final(char **final)
+{
+	int	i;
+
+	i = 0;
+	while (final[i] != NULL)
+	{
+		free(final[i]);
+		i++;
+	}
+	free(final);
+}
+
+static char	**ft_main_part(char const *s, char c, char **final)
+{
+	int		i;
+	int		j;
+	size_t	sub_len;
+
+	i = 0;
+	j = 0;
+	while (s[i])
+	{
+		while (s[i] == c)
+			i++;
+		if (!s[i])
+			break ;
+		sub_len = ft_substring_length((char *)(s + i), c);
+		final[j] = ft_substr((s + i), 0, sub_len);
+		if (final[j] == NULL)
+		{
+			ft_free_final(final);
+			return (NULL);
+		}
+		i = i + sub_len;
+		j++;
+	}
+	final[j] = NULL;
+	return (final);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**final;
+
+	if (s == NULL)
+		return (NULL);
+	final = ft_calloc((ft_count_substrings((char *)s, c) + 1), sizeof(char *));
+	if (final == NULL)
+		return (NULL);
+	return (ft_main_part(s, c, final));
 }
