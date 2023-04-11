@@ -6,19 +6,15 @@
 #    By: mevangel <mevangel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/21 15:04:14 by mevangel          #+#    #+#              #
-#    Updated: 2023/04/09 20:47:03 by mevangel         ###   ########.fr        #
+#    Updated: 2023/04/11 23:09:19 by mevangel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# -*- Makefile -*-
-
-# Variable always in CAPITAL LETTERS
-
 NAME := libft.a
 
-CFLAGS := -Wall -Werror -Wextra
-#ARFLAGS := -rcs 
-CC := cc 
+CFLAGS := -Wall -Wextra -Werror
+
+CC := cc
 
 SRCS := ft_isalpha.c \
 		ft_isdigit.c \
@@ -57,12 +53,17 @@ SRCS := ft_isalpha.c \
 
 OBJS := $(SRCS:%.c=%.o)
 
-BONUS_SRCS := ft_lstnew.c 
+BONUS_SRCS := ft_lstnew.c \
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstadd_back.c \
+		ft_lstdelone.c \
+		ft_lstclear.c \
+		ft_lstiter.c \
+		ft_lstmap.c
 
 BONUS_OBJS := $(BONUS_SRCS:%.c=%.o)
-
-# To call a variable in a rule use 
-# $(VARIABLE)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
