@@ -6,21 +6,21 @@
 /*   By: mevangel <mevangel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 01:32:42 by mevangel          #+#    #+#             */
-/*   Updated: 2023/03/30 19:42:43 by mevangel         ###   ########.fr       */
+/*   Updated: 2023/04/12 19:10:24 by mevangel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strdup(const char *str)
+char	*ft_strdup(const char *s1)
 {
 	char	*cp;
+	size_t	len;
 
-	cp = malloc(ft_strlen(str) + 1);
+	len = ft_strlen(s1) + 1;
+	cp = (char *)malloc(len);
 	if (cp == NULL)
 		return (NULL);
-	ft_strlcpy(cp, str, (ft_strlen(str) + 1));
+	ft_strlcpy(cp, s1, len);
 	return (cp);
 }

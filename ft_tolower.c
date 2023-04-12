@@ -6,11 +6,9 @@
 /*   By: mevangel <mevangel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 13:28:48 by mevangel          #+#    #+#             */
-/*   Updated: 2023/03/22 16:00:42 by mevangel         ###   ########.fr       */
+/*   Updated: 2023/04/12 16:11:16 by mevangel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_tolower(int c)
 {

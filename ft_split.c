@@ -6,12 +6,11 @@
 /*   By: mevangel <mevangel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 18:56:12 by mevangel          #+#    #+#             */
-/*   Updated: 2023/04/05 18:49:09 by mevangel         ###   ########.fr       */
+/*   Updated: 2023/04/12 20:00:51 by mevangel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include "libft.h" 
+#include "libft.h"
 
 static size_t	ft_count_substrings(char *s, char c)
 {
@@ -83,10 +82,12 @@ static char	**ft_main_part(char const *s, char c, char **final)
 char	**ft_split(char const *s, char c)
 {
 	char	**final;
+	size_t	num_cal;
 
 	if (s == NULL)
 		return (NULL);
-	final = ft_calloc((ft_count_substrings((char *)s, c) + 1), sizeof(char *));
+	num_cal = ft_count_substrings((char *)s, c) + 1;
+	final = (char **)ft_calloc(num_cal, sizeof(char *));
 	if (final == NULL)
 		return (NULL);
 	return (ft_main_part(s, c, final));

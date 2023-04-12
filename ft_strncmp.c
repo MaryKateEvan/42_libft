@@ -6,11 +6,11 @@
 /*   By: mevangel <mevangel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 18:59:36 by mevangel          #+#    #+#             */
-/*   Updated: 2023/03/29 21:54:40 by mevangel         ###   ########.fr       */
+/*   Updated: 2023/04/12 17:42:00 by mevangel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

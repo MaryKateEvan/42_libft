@@ -6,11 +6,9 @@
 /*   By: mevangel <mevangel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 13:28:48 by mevangel          #+#    #+#             */
-/*   Updated: 2023/03/23 00:08:37 by mevangel         ###   ########.fr       */
+/*   Updated: 2023/04/12 16:03:33 by mevangel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_toupper(int c)
 {

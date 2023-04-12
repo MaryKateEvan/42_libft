@@ -6,22 +6,22 @@
 /*   By: mevangel <mevangel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:31:25 by mevangel          #+#    #+#             */
-/*   Updated: 2023/03/22 16:41:15 by mevangel         ###   ########.fr       */
+/*   Updated: 2023/04/12 17:26:23 by mevangel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char	*cp_dest;
+	char	*cp_dst;
 	char	*cp_src;
 
-	cp_dest = (char *)dest;
+	cp_dst = (char *)dst;
 	cp_src = (char *)src;
-	if (!dest && !src)
-		return (dest);
+	if (!dst && !src)
+		return (dst);
 	while (n--)
-		*cp_dest++ = *cp_src++;
-	return (dest);
+		*(cp_dst++) = *(cp_src++);
+	return (dst);
 }

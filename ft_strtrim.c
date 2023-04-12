@@ -6,11 +6,11 @@
 /*   By: mevangel <mevangel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 21:10:07 by mevangel          #+#    #+#             */
-/*   Updated: 2023/03/30 19:49:35 by mevangel         ###   ########.fr       */
+/*   Updated: 2023/04/12 18:40:12 by mevangel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

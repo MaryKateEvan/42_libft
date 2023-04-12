@@ -6,7 +6,7 @@
 /*   By: mevangel <mevangel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 17:07:43 by mevangel          #+#    #+#             */
-/*   Updated: 2023/03/30 21:52:34 by mevangel         ###   ########.fr       */
+/*   Updated: 2023/04/12 19:03:21 by mevangel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_itoa(int n)
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	len = get_str_len(n);
-	ptr = ft_calloc(len + 1, sizeof(char));
+	ptr = (char *)ft_calloc(len + 1, sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
 	i = 0;

@@ -6,23 +6,23 @@
 /*   By: mevangel <mevangel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:31:25 by mevangel          #+#    #+#             */
-/*   Updated: 2023/03/17 22:19:55 by mevangel         ###   ########.fr       */
+/*   Updated: 2023/04/12 17:22:55 by mevangel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	*ft_memset(void *str, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*cp;
 	size_t			i;
 
-	cp = str;
+	cp = b;
 	i = 0;
 	while (i < len)
 	{
-		cp[i] = c;
+		cp[i] = (unsigned char)c;
 		i++;
 	}
-	return (str);
+	return (b);
 }

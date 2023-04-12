@@ -6,11 +6,10 @@
 /*   By: mevangel <mevangel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 23:20:40 by mevangel          #+#    #+#             */
-/*   Updated: 2023/03/31 01:02:06 by mevangel         ###   ########.fr       */
+/*   Updated: 2023/04/12 19:27:06 by mevangel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)

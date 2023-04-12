@@ -6,11 +6,10 @@
 /*   By: mevangel <mevangel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 16:52:15 by mevangel          #+#    #+#             */
-/*   Updated: 2023/03/24 14:00:07 by mevangel         ###   ########.fr       */
+/*   Updated: 2023/04/12 17:33:13 by mevangel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
