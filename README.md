@@ -6,9 +6,9 @@
 
 ## Functions included in the project: 
 
-### A. Functions from `libc`:
+### A. Functions from `libc`
 
-#### Functions from `<ctype.h>`
+#### Functions from `<ctype.h>`:
 - `ft_isalpha` - checks if character is alphabetic.
 - `ft_isdigit` - checks if character is a digit.
 - `ft_isalnum` - checks if character is alphabetic or digit.
@@ -17,7 +17,7 @@
 - `ft_toupper` - converts character to uppercase.
 - `ft_tolower` - converts character to lowercase.
 
-#### Functions from `<string.h>`
+#### Functions from `<string.h>`:
 - `ft_strlen` - calculates the length of a string.
 - `ft_strchr` - locates the first occurrence of a character in a string.
 - `ft_strrchr` - locates the last occurrence of a character in a string.
@@ -32,11 +32,12 @@
 - `ft_memchr` - searches a block of memory for a specified byte.
 - `ft_bzero` - writes zeroes to a byte string.
 
-#### Functions from `<stdlib.h>`
+#### Functions from `<stdlib.h>`:
 - `ft_atoi` - converts string to integer.
 - `ft_calloc` - allocates and zero-initialize memory.
 - `ft_strdup` - duplicates a string.
 
+<br>
 ### B. Additional functions (**not** included in `libc`)
 
 #### Non-standard functions:
