@@ -33,7 +33,7 @@
 - `ft_bzero` - writes zeroes to a byte string.
 
 #### Functions from `<stdlib.h>`:
-- `ft_atoi` - converts string to integer.
+- [`ft_atoi`](https://github.com/MaryKateEvan/42_libft/blob/master/ft_atoi.c) - converts string to integer.
 - `ft_calloc` - allocates and zero-initialize memory.
 - `ft_strdup` - duplicates a string.<br>
 
