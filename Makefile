@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mevangel <mevangel@student.42.fr>          +#+  +:+       +#+         #
+#    By: mevangel <mevangel@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/21 15:04:14 by mevangel          #+#    #+#              #
-#    Updated: 2023/04/11 23:09:19 by mevangel         ###   ########.fr        #
+#    Updated: 2023/06/04 18:55:01 by mevangel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
