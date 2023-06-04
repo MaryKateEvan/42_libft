@@ -36,8 +36,8 @@
 - `ft_atoi` - converts string to integer.
 - `ft_calloc` - allocates and zero-initialize memory.
 - `ft_strdup` - duplicates a string.
-
 <br>
+
 ### B. Additional functions (**not** included in `libc`)
 
 #### Non-standard functions:
