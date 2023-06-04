@@ -17,7 +17,7 @@
 - `ft_toupper` - converts character to uppercase.
 - `ft_tolower` - converts character to lowercase.
 
-#### Functions from `<string.h>`:
+#### Functions from `<string(s).h>`:
 - `ft_strlen` - calculates the length of a string.
 - `ft_strchr` - locates the first occurrence of a character in a string.
 - `ft_strrchr` - locates the last occurrence of a character in a string.
@@ -35,8 +35,7 @@
 #### Functions from `<stdlib.h>`:
 - `ft_atoi` - converts string to integer.
 - `ft_calloc` - allocates and zero-initialize memory.
-- `ft_strdup` - duplicates a string.
-<br>
+- `ft_strdup` - duplicates a string.<br>
 
 ### B. Additional functions (**not** included in `libc`)
 
